@@ -1,0 +1,154 @@
+/* Light Theme */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #c2e9fb, #a1c4fd);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.container {
+    max-width: 720px;
+    background-color: white;
+    padding: 40px;
+    margin: 60px auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #3498db;
+}
+
+h1 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #34495e;
+    margin-top: 30px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+}
+
+li {
+    margin: 8px 0;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #217dbb;
+}
+
+#themeToggle {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #34495e;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Typewriter Effect */
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid #2c3e50;
+    white-space: nowrap;
+    animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark Mode */
+body.dark {
+    background: #1f1f1f;
+    color: #eee;
+}
+
+body.dark .container {
+    background: #2c2c2c;
+}
+
+body.dark .btn {
+    background-color: #555;
+}
+
+body.dark .btn:hover {
+    background-color: #777;
+}
+
+body.dark #themeToggle {
+    background-color: #eee;
+    color: #111;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
